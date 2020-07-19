@@ -13,6 +13,7 @@ var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const uploadRouter = require('./routes/uploadRouter');
 const port=3000;
 const hostname="localhost";
 const mongoose=require('mongoose');
@@ -55,7 +56,7 @@ app.use('/users', usersRouter);
 app.use('/dishes',dishRouter);
 app.use('/promotions',promoRouter);
 app.use('/leaders',leaderRouter);
-
+app.use('/imageUpload',uploadRouter);
 
 
 // catch 404 and forward to error handler
